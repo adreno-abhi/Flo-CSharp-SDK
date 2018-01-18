@@ -1,0 +1,6 @@
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FlorincoinConnector\FlorincoinConnector\bin\Debug\FlorincoinConnector.dll
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FlorincoinConnector\FlorincoinConnector\bin\Debug\FlorincoinConnector.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FlorincoinConnector\FlorincoinConnector\obj\Debug\FlorincoinConnector.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FlorincoinConnector\FlorincoinConnector\obj\Debug\FlorincoinConnector.dll
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FlorincoinConnector\FlorincoinConnector\obj\Debug\FlorincoinConnector.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FlorincoinConnector\FlorincoinConnector\obj\Debug\FlorincoinConnector.csprojResolveAssemblyReference.cache
