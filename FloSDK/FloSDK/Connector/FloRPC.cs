@@ -1,5 +1,12 @@
 ﻿//Author : Abhijeet Das Gupta
 
+//MIT License
+//Copyright(c) 2018 Abhijeet
+//Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
 using FloSDK.Exceptions;
 using FloSDK.RequestResponse;
 using Newtonsoft.Json;
@@ -32,51 +39,6 @@ namespace FloSDK.Connector
         }
 
         //Library Method used to make RPC Calls to FLO wallet.
-        //Parameters required are RPC method name, client id (optional) and JArray object to pass parameters for RPC methods (if required). 
-        //IF no parameter is required null is passed as props
-
-        public dynamic CallFloRPC(string method, string id, JArray props)
-        {
-            try
-            {
-                JObject jobj = new JObject();
-                jobj.Add(new JProperty("jsonrpc", "1.0"));
-                jobj.Add(new JProperty("id", id));
-                jobj.Add(new JProperty("method", method));
-
-                if (props != null)
-                {
-                    if (props.HasValues)
-                    {
-                        jobj.Add(new JProperty("params", props));
-                    }
-                }
-
-
-                string s = JsonConvert.SerializeObject(jobj);
-                byte[] byteArray = Encoding.UTF8.GetBytes(s);
-                webRequest.ContentLength = byteArray.Length;
-                Stream dataStream = webRequest.GetRequestStream();
-                dataStream.Write(byteArray, 0, byteArray.Length);
-                dataStream.Close();
-                WebResponse webResponse = null;
-
-                webResponse = webRequest.GetResponse();
-
-                StreamReader reader = new StreamReader(webResponse.GetResponseStream(), System.Text.Encoding.UTF8);
-                string resultData = reader.ReadToEnd();
-
-
-                return resultData;
-
-            }
-            catch (Exception ex)
-            {
-                throw new RpcException("There was a problem sending the request to the wallet", ex);
-                //return "{\"error\" : \"Error calling RPC method.\"}";
-            }
-        }
-
 
         public string MakeRequest(string method, params object[] parameters)
         {
