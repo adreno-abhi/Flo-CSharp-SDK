@@ -10,27 +10,29 @@
 (URL : https://www.newtonsoft.com/json)
 
 
-#Description
+## Description
 
 FLO C# SDK is a C# Class Library for connecting to local / remote FLO wallet and making wallet calls for creating FLO Blockchain enabled apps in C#.
 Can be referenced into any C# Project to extend the RPC Call functionality to FLO wallet.
 
 
-#Repository Contains:
+## Repository Contains:
 
 **1. FloSDK - Class Library Project**
+
 **2. RPCTest - C# Sample Console Application implementing the FloSDK library**
 
 
-#How To Use:
+## How To Use:
 
-**1. Download and Install FLO Wallet**: 
+### 1. Download and Install FLO Wallet: 
 URL (Windows) : http://flo.cash/static/assets/wallet/florincoin-0.10.4.6-qt-win64.zip
 
-**2. Sync FLO Blockchain**
+### 2. Sync FLO Blockchain
 
-**3. Configure florincoin.conf file** - Default Location of file is :
-C:\Users\{Username}\AppData\Roaming\Florincoin
+### 3. Configure florincoin.conf file
+
+Default Location of file is : C:\Users\{Username}\AppData\Roaming\Florincoin
 
 **Sample .conf file below:**
 
