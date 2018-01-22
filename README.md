@@ -57,8 +57,63 @@ addnode=ind.entertheblockchain.com
 addnode=de.entertheblockchain.com
 ```
 
+### 4. Build FloSDK Project
 
-**To Support :**
+### 5. Add FloSDK DLL to your application as reference.
+
+### 6. Configure .config file of your application to have the following:
+
+Example app.config settings of sample console application:
+```
+  <appSettings>
+    <add key="username" value="wallet_rpc_username" />
+    <add key="password" value="wallet_rpc_password" />
+    <add key="wallet_url" value="http://localhost" />
+    <add key="wallet_port" value="7313" />
+  </appSettings>
+```
+
+### 7. Declare variables for the above in your program:
+
+```C#
+            string username = ConfigurationManager.AppSettings.Get("username");
+            string password = ConfigurationManager.AppSettings.Get("password");
+            string wallet_url = ConfigurationManager.AppSettings.Get("wallet_url");
+            string wallet_port = ConfigurationManager.AppSettings.Get("wallet_port");
+```
+         
+### 8. Import the following packages of FloSDK in your program:
+
+```C#
+using FloSDK.Exceptions;
+using FloSDK.Methods;
+```
+
+### 9. Create object of RpcMethods class:
+
+```C#
+RpcMethods rpc = new RpcMethods(username, password, wallet_url, wallet_port);
+```
+
+### 10. Call RPC methods of SDK using the RpcMethods object and cast response as JObject:
+
+```C#
+                JObject obj = JObject.Parse(rpc.GetInfo());
+
+                if (string.IsNullOrEmpty(obj["error"].ToString()))
+                {
+                    Console.WriteLine("Get Info : " + obj["result"]);
+                }
+                else
+                {
+                    Console.WriteLine("Get Info Error : " + obj["error"]);
+                }
+```
+Check the response JObject for "error" or "result".
+
+
+
+## To Support in Development of the FLO C# SDK :
 
 **Donate FLO To :** FUvB6T8EtspmtsnhA9deE1uBkaWZTmWpUw
 
