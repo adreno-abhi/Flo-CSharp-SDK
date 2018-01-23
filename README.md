@@ -20,7 +20,7 @@ Can be referenced into any C# Project to extend the RPC Call functionality to FL
 
 **1. FloSDK - Class Library Project**
 
-**2. RPCTest - C# Sample Console Application implementing the FloSDK library**
+**2. FloSdkTest - C# Sample Console Application implementing the FloSDK library**
 
 
 ## How To Use:
