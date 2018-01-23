@@ -294,5 +294,102 @@ namespace FloSDK.Methods
             string resp = conn.MakeRequest("verifymessage", florincoinaddress, signature, message);
             return resp;
         }
+
+        public string DumpPrivkey(string florincoinaddress)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("dumpprivkey", florincoinaddress);
+            return resp;
+        }
+
+        public string DumpWallet(string filename)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("dumpwallet", filename);
+            return resp;
+        }
+
+        public string EncryptWallet(string passphrase)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("encryptwallet", passphrase);
+            return resp;
+        }
+
+        public string GetAccount(string florincoinaddress)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getaccount", florincoinaddress);
+            return resp;
+        }
+
+        public string GetAccountAddress(string account)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getaccountaddress", account);
+            return resp;
+        }
+
+        public string GetAddressesByAccount(string account)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getaddressesbyaccount", account);
+            return resp;
+        }
+        public string GetBalance(string account)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getbalance", account);
+            return resp;
+        }
+
+        public string GetNewAddress(string account)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getnewaddress", account);
+            return resp;
+        }
+
+        public string GetRawChangeAddress()
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getrawchangeaddress");
+            return resp;
+        }
+
+        public string GetReceivedByAccount(string account)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getreceivedbyaccount", account);
+            return resp;
+        }
+
+        public string GetReceivedByAddress(string florincoinaddress)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getreceivedbyaddress", florincoinaddress);
+            return resp;
+        }
+
+        public string GetTransaction(string txid)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("gettransaction", txid);
+            return resp;
+        }
+
+        public string GetUnconfirmedBalance()
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getunconfirmedbalance");
+            return resp;
+        }
+
+        public string GetWalletInfo()
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getwalletinfo");
+            return resp;
+        }
     }
 }

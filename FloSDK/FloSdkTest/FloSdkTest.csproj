@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{560DED24-CC6E-4E35-A42F-A4B6D0832CDD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>RPCTest</RootNamespace>
-    <AssemblyName>RPCTest</AssemblyName>
+    <RootNamespace>FloSdkTest</RootNamespace>
+    <AssemblyName>FloSdkTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

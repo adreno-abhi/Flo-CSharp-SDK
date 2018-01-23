@@ -65,8 +65,21 @@ namespace FloSDK.Methods
         string VerifyMessage(string florincoinaddress, string signature, string message);
 
         //== Wallet ==
-
-
+        //TODO: addmultisigaddress
+        string DumpPrivkey(string florincoinaddress);
+        string DumpWallet(string filename);
+        string EncryptWallet(string passphrase);
+        string GetAccount(string florincoinaddress);
+        string GetAccountAddress(string account);
+        string GetAddressesByAccount(string account);
+        string GetBalance(string account);
+        string GetNewAddress(string account);
+        string GetRawChangeAddress();
+        string GetReceivedByAccount(string account);
+        string GetReceivedByAddress(string florincoinaddress);
+        string GetTransaction(string txid);
+        string GetUnconfirmedBalance();
+        string GetWalletInfo();
 
 
     }

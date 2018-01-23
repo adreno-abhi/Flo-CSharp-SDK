@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloSDK", "FloSDK\FloSDK.csproj", "{CFD0776B-277A-4C41-B8B6-E8364AA753E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPCTest", "RPCTest\RPCTest.csproj", "{560DED24-CC6E-4E35-A42F-A4B6D0832CDD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloSdkTest", "FloSdkTest\FloSdkTest.csproj", "{560DED24-CC6E-4E35-A42F-A4B6D0832CDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Abhijeet Das Gupta")]
 [assembly: AssemblyProduct("FloSDK")]
-[assembly: AssemblyCopyright("Copyright © Abhijeet Das Gupta 2017")]
+[assembly: AssemblyCopyright("Copyright © Abhijeet Das Gupta 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

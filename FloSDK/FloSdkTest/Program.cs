@@ -12,11 +12,10 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Configuration;
 
-namespace RPCTest
+namespace FloSdkTest
 {
     class Program
-    {
-        
+    {        
         static void Main(string[] args)
         {
             string username = ConfigurationManager.AppSettings.Get("username");
@@ -54,9 +53,34 @@ namespace RPCTest
                 else
                 {
                     Console.WriteLine("Get Help Error : " + obj["error"]);
-                }           
+                }
 
-            
+                //Get Balance
+
+                obj = JObject.Parse(rpc.GetBalance(""));
+
+                if (string.IsNullOrEmpty(obj["error"].ToString()))
+                {
+                    Console.WriteLine("Balance : " + obj["result"]);
+                }
+                else
+                {
+                    Console.WriteLine("Get Balance Error : " + obj["error"]);
+                }
+
+                //Get Wallet Info
+                obj = JObject.Parse(rpc.GetWalletInfo());
+
+                if (string.IsNullOrEmpty(obj["error"].ToString()))
+                {
+                    Console.WriteLine("Wallet Info : " + obj["result"]);
+                }
+                else
+                {
+                    Console.WriteLine("Wallet Info Error : " + obj["error"]);
+                }
+
+
             }
             catch (RpcInternalServerErrorException exception)
             {
