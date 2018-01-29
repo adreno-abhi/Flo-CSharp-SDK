@@ -9,3 +9,14 @@ C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\RPCTest\obj\Debug\FloSd
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\RPCTest\obj\Debug\FloSdkTest.csproj.CoreCompileInputs.cache
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\RPCTest\obj\Debug\FloSdkTest.exe
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\RPCTest\obj\Debug\FloSdkTest.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\bin\Debug\FloSdkTest.exe.config
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\bin\Debug\FloSdkTest.exe
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\bin\Debug\FloSdkTest.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\bin\Debug\FloSDK.dll
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\bin\Debug\FloSDK.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.exe
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.pdb

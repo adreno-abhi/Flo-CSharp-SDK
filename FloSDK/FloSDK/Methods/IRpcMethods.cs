@@ -6,6 +6,8 @@
 //The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 //THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+using Newtonsoft.Json.Linq;
+
 namespace FloSDK.Methods
 {
     interface IRpcMethods
@@ -50,7 +52,7 @@ namespace FloSDK.Methods
         string Ping();
 
         //== Rawtransactions ==
-        //TODO: createrawtransaction 
+        string CreateRawTransaction(JArray transactions, JObject addresses);
         string DecodeRawTransaction(string hexstring);
         string DecodeScript(string hex);
         string GetRawTransaction(string txid);
@@ -58,14 +60,14 @@ namespace FloSDK.Methods
         string SignRawTransaction(string hexstring);
 
         //== Util ==
-        //TODO: createmultisig 
+        string CreateMultisig(int nrequired, JArray keys);
         string EstimateFee(int nblocks);
         string EstimatePriority(string nblocks);
         string ValidateAddress(string florincoinaddress);
         string VerifyMessage(string florincoinaddress, string signature, string message);
 
         //== Wallet ==
-        //TODO: addmultisigaddress
+        string AddultisigAddress(int nrequired, JArray keysobject);
         string DumpPrivkey(string florincoinaddress);
         string DumpWallet(string filename);
         string EncryptWallet(string passphrase);
@@ -80,7 +82,26 @@ namespace FloSDK.Methods
         string GetTransaction(string txid);
         string GetUnconfirmedBalance();
         string GetWalletInfo();
-
+        string ImportAddress(string address);
+        string ImportPrivKey(string florincoinprivkey);
+        string ImportWallet(string filename);
+        string KeypoolRefill();
+        string ListAccounts();
+        string ListAddressGroupings();
+        string ListLockUnspent();
+        string ListReceivedByAccount();
+        string ListReceivedByAddress();
+        string ListSinceBlock();
+        string ListTransactions();
+        string ListUnspent();
+        string LockUnspent(bool unlock, JArray transactions);
+        string Move(string fromaccount, string toaccount, decimal amount);
+        string SendFrom(string fromaccount, string toflorincoinaddress, decimal amount);
+        string SendMany(string fromaccount, JObject addresses);
+        string SendToAddress(string florincoinaddress, decimal amount, string comment, string commentto, string txcomment);
+        string SetAccount(string florincoinaddress, string account);
+        string SetTxFee(decimal amount);
+        string SignMessage(string florincoinaddress, string message);
 
     }
 }

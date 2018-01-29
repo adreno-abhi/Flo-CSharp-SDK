@@ -15,7 +15,7 @@ using System.Configuration;
 namespace FloSdkTest
 {
     class Program
-    {        
+    {
         static void Main(string[] args)
         {
             string username = ConfigurationManager.AppSettings.Get("username");
@@ -26,7 +26,7 @@ namespace FloSdkTest
 
             RpcMethods rpc = new RpcMethods(username, password, wallet_url, wallet_port);
 
-            
+
             try
             {
                 //Get Info
@@ -40,10 +40,10 @@ namespace FloSdkTest
                 {
                     Console.WriteLine("Get Info Error : " + obj["error"]);
                 }
-            
+
 
                 //Get Help
-            
+
                 obj = JObject.Parse(rpc.Help("getinfo"));
 
                 if (string.IsNullOrEmpty(obj["error"].ToString()))
@@ -78,7 +78,7 @@ namespace FloSdkTest
                 else
                 {
                     Console.WriteLine("Wallet Info Error : " + obj["error"]);
-                }
+                }              
 
 
             }
