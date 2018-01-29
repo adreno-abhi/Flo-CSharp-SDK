@@ -1,7 +1,7 @@
 # FLO C# SDK
 **Author** : Abhijeet Das Gupta
 
-**Version** : 0.0.0.1
+**Version** : 1.0.0.0
 
 **.Net Framework Used** : 4.6.1
 
@@ -15,6 +15,7 @@
 FLO C# SDK is a C# Class Library for connecting to local / remote FLO wallet and making wallet calls for creating FLO Blockchain enabled apps in C#.
 Can be referenced into any C# Project to extend the RPC Call functionality to FLO wallet.
 
+**Note:RPC methods "stop" and "backupwallet" have not been implemented. Other than that all other RPC calls of FLO have been implemented in this SDK**
 
 ## Repository Contains:
 
@@ -113,8 +114,9 @@ Check the response JObject for "error" or "result".
 
 
 
-## To Support in Development of the FLO C# SDK :
+## To Support Development of the FLO C# SDK :
 
 **Donate FLO To :** FUvB6T8EtspmtsnhA9deE1uBkaWZTmWpUw
+**Donate BTC TO :** 3Ki9uziXHF4csqheDifK1MRAWFJEMSKHkH
 
 
