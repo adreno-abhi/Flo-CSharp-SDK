@@ -99,16 +99,37 @@ RpcMethods rpc = new RpcMethods(username, password, wallet_url, wallet_port);
 ### 10. Call RPC methods of SDK using the RpcMethods object and cast response as JObject:
 
 ```C#
-                JObject obj = JObject.Parse(rpc.GetInfo());
+                try
+                {
+                    JObject obj = JObject.Parse(rpc.GetInfo());
 
-                if (string.IsNullOrEmpty(obj["error"].ToString()))
-                {
-                    Console.WriteLine("Get Info : " + obj["result"]);
+                    if (string.IsNullOrEmpty(obj["error"].ToString()))
+                    {
+                        Console.WriteLine("Get Info : " + obj["result"]);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Get Info Error : " + obj["error"]);
+                    }
                 }
-                else
+                catch (RpcInternalServerErrorException exception)
                 {
-                    Console.WriteLine("Get Info Error : " + obj["error"]);
+                    var errorCode = 0;
+                    var errorMessage = string.Empty;
+
+                    if (exception.RpcErrorCode.GetHashCode() != 0)
+                    {
+                        errorCode = exception.RpcErrorCode.GetHashCode();
+                        errorMessage = exception.RpcErrorCode.ToString();
+                    }
+
+                    Console.WriteLine("[Failed] {0} {1} {2}", exception.Message, errorCode != 0 ? "Error code: " + errorCode : string.Empty, !string.IsNullOrWhiteSpace(errorMessage) ? errorMessage : string.Empty);
                 }
+                catch (Exception exception)
+                {
+                    Console.WriteLine("[Failed]\n\nPlease check your configuration and make sure that the daemon is up and running and that it is synchronized. \n\nException: " + exception);
+                }
+                
 ```
 Check the response JObject for "error" or "result".
 
