@@ -1,5 +1,5 @@
 # FLO C# SDK
-**Author** : Abhijeet Das Gupta
+**Author** : Abhijeet Das Gupta @ 366Pi
 
 **Version** : 1.0.0.0
 
