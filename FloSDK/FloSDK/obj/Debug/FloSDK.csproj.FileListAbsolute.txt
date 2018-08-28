@@ -4,3 +4,9 @@ C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.dll
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.pdb
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.csprojResolveAssemblyReference.cache
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\bin\Debug\FloSDK.dll
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\bin\Debug\FloSDK.pdb
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.csprojResolveAssemblyReference.cache
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.csproj.CoreCompileInputs.cache
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.dll
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.pdb

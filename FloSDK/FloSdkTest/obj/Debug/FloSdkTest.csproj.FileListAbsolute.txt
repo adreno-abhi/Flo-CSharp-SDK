@@ -20,3 +20,14 @@ C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\Fl
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.csproj.CoreCompileInputs.cache
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.exe
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.pdb
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\bin\Debug\FloSdkTest.exe.config
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\bin\Debug\FloSdkTest.exe
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\bin\Debug\FloSdkTest.pdb
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\bin\Debug\FloSDK.dll
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\bin\Debug\Newtonsoft.Json.dll
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\bin\Debug\FloSDK.pdb
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\bin\Debug\Newtonsoft.Json.xml
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.csprojResolveAssemblyReference.cache
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.csproj.CoreCompileInputs.cache
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.exe
+E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSdkTest\obj\Debug\FloSdkTest.pdb
