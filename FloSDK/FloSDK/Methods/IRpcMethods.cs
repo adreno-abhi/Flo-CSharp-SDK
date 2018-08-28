@@ -67,7 +67,7 @@ namespace FloSDK.Methods
         string VerifyMessage(string florincoinaddress, string signature, string message);
 
         //== Wallet ==
-        string AddultisigAddress(int nrequired, JArray keysobject);
+        string AddMultisigAddress(int nrequired, JArray keysobject);
         string DumpPrivkey(string florincoinaddress);
         string DumpWallet(string filename);
         string EncryptWallet(string passphrase);
@@ -98,7 +98,8 @@ namespace FloSDK.Methods
         string Move(string fromaccount, string toaccount, decimal amount);
         string SendFrom(string fromaccount, string toflorincoinaddress, decimal amount);
         string SendMany(string fromaccount, JObject addresses);
-        string SendToAddress(string florincoinaddress, decimal amount, string comment, string commentto, string txcomment);
+        //string SendToAddress(string florincoinaddress, decimal amount, string comment, string commentto, string txcomment);
+        string SendToAddress(string address, decimal amount, string comment, string comment_to, bool subtractfeefromamount, bool replaceable, int conf_target, string estimate_mode, string floData);
         string SetAccount(string florincoinaddress, string account);
         string SetTxFee(decimal amount);
         string SignMessage(string florincoinaddress, string message);

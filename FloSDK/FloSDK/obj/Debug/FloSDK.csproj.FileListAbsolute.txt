@@ -3,3 +3,4 @@ C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\bin\Debug\FloSDK
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.csproj.CoreCompileInputs.cache
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.dll
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.csprojResolveAssemblyReference.cache

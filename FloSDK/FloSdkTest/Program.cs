@@ -78,7 +78,90 @@ namespace FloSdkTest
                 else
                 {
                     Console.WriteLine("Wallet Info Error : " + obj["error"]);
-                }              
+                }
+
+                //Test
+
+                var jsonObject = new JObject();
+                jsonObject.Add("oQDkguVz7CW2eEYCWD2G636tWCg23YcnRx", 1.2);
+                jsonObject.Add("oXRrzwxUMcpxHCQWP4T1MQAocudWDzL1UJ", 0.2);
+
+                var job1 = new JObject();
+                var job2 = new JObject();
+                job1.Add("txid", "b1aa06d72323ae923784d80ebb890c286d963d37901d73806fa2a4fff91865f3");
+                job1.Add("vout", 1);
+                job2.Add("txid", "b1aa06d72323ae923784d80ebb890c286d963d37901d73806fa2a4fff91865f4");
+                job2.Add("vout", 2);
+
+                //create raw transaction
+                var jarr = new JArray();
+                jarr.Add(job1);
+                jarr.Add(job2);
+
+                //obj = JObject.Parse(rpc.CreateRawTransaction(jarr, jsonObject));
+
+                //if (string.IsNullOrEmpty(obj["error"].ToString()))
+                //{
+                //    Console.WriteLine("Create Raw Transaction : " + obj["result"]);
+                //}
+                //else
+                //{
+                //    Console.WriteLine("Error : " + obj["error"]);
+                //}
+                                
+                //decode raw transaction
+                obj = JObject.Parse(rpc.DecodeRawTransaction("0200000002f36518f9ffa4a26f80731d90373d966d280c89bb0ed8843792ae2323d706aab10100000000fffffffff46518f9ffa4a26f80731d90373d966d280c89bb0ed8843792ae2323d706aab10200000000ffffffff02000e2707000000001976a91450a3f1d1f0d046af51cc150a6d4c33b37b7daf3988ac002d3101000000001976a9149fb715b93dac58ff46cdafd43c34762109ca604388ac0000000000"));
+
+                if (string.IsNullOrEmpty(obj["error"].ToString()))
+                {
+                    Console.WriteLine("Decode Raw Transaction : " + obj["result"]);
+                }
+                else
+                {
+                    Console.WriteLine("Error : " + obj["error"]);
+                }
+
+                //create multi sig
+                jarr = new JArray();
+                jarr.Add("oYbD4joh3G6d3k3wKbFtBQfgq9BPFxzWPn");
+                jarr.Add("oJsvAWvNWZ1jk3fV1BpaWHR3wPrYVaVxwZ");
+
+                obj = JObject.Parse(rpc.AddMultisigAddress(2,jarr));
+
+                if (string.IsNullOrEmpty(obj["error"].ToString()))
+                {
+                    Console.WriteLine("Add Multisig : " + obj["result"]);
+                }
+                else
+                {
+                    Console.WriteLine("Error : " + obj["error"]);
+                }
+
+                
+
+                //obj = JObject.Parse(rpc.SendMany("AbhijeetTest", jsonObject));
+
+                //if (string.IsNullOrEmpty(obj["error"].ToString()))
+                //{
+                //    Console.WriteLine("Send To Many : " + obj["result"]);
+                //}
+                //else
+                //{
+                //    Console.WriteLine("Error : " + obj["error"]);
+                //}
+
+
+                //Get Wallet Info
+                obj = JObject.Parse(rpc.SubmitBlock("123456ffggg"));
+
+                if (string.IsNullOrEmpty(obj["error"].ToString()))
+                {
+                    Console.WriteLine("Wallet Info : " + obj["result"]);
+                }
+                else
+                {
+                    Console.WriteLine("Wallet Info Error : " + obj["error"]);
+                }
 
 
             }

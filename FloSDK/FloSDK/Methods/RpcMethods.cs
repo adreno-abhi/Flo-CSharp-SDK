@@ -309,7 +309,7 @@ namespace FloSDK.Methods
             return resp;
         }
 
-        public string AddultisigAddress(int nrequired, JArray keysobject)
+        public string AddMultisigAddress(int nrequired, JArray keysobject)
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
             string resp = conn.MakeRequest("addmultisigaddress", nrequired, keysobject);
@@ -523,10 +523,17 @@ namespace FloSDK.Methods
             return resp;
         }
 
-        public string SendToAddress(string florincoinaddress, decimal amount, string comment, string commentto, string txcomment)
+        //public string SendToAddress(string florincoinaddress, decimal amount, string comment, string commentto, string txcomment)
+        //{
+        //    FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+        //    string resp = conn.MakeRequest("sendtoaddress", florincoinaddress, amount, comment, commentto, txcomment);
+        //    return resp;
+        //}
+
+        public string SendToAddress(string address, decimal amount, string comment, string comment_to, bool subtractfeefromamount, bool replaceable, int conf_target, string estimate_mode, string floData)
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
-            string resp = conn.MakeRequest("sendtoaddress", florincoinaddress, amount, comment, commentto, txcomment);
+            string resp = conn.MakeRequest("sendtoaddress", address, amount, comment, comment_to, subtractfeefromamount, replaceable, conf_target, estimate_mode, floData);
             return resp;
         }
 
