@@ -33,10 +33,8 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <Private>False</Private>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,6 +49,7 @@
     <Compile Include="Connector\FloRPC.cs" />
     <Compile Include="Methods\IRpcMethods.cs" />
     <Compile Include="Exceptions\JsonRpcError.cs" />
+    <Compile Include="RequestResponse\CreateRawTransactionRequest.cs" />
     <Compile Include="RequestResponse\JsonRpcRequest.cs" />
     <Compile Include="RequestResponse\JsonRpcResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -60,12 +59,13 @@
     <Compile Include="ErrorCodes\RpcErrorCode.cs" />
     <Compile Include="Exceptions\RpcRequestTimeoutException.cs" />
     <Compile Include="Exceptions\RpcResponseDeserializationException.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="RequestResponse\SendRawTransactionRequest.cs" />
+    <Compile Include="RequestResponse\SignRawTransactionRequest.cs" />
+    <Compile Include="RequestResponse\ValidateAddressResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Newtonsoft.Json.dll" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

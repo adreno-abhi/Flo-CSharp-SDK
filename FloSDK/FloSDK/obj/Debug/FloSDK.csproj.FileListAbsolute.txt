@@ -4,9 +4,16 @@ C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.dll
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.pdb
 C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK\FloSDK\obj\Debug\FloSDK.csprojResolveAssemblyReference.cache
-E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\bin\Debug\FloSDK.dll
-E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\bin\Debug\FloSDK.pdb
-E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.csprojResolveAssemblyReference.cache
-E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.csproj.CoreCompileInputs.cache
-E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.dll
-E:\Personal\366pi\FLO Github\FloSDK\Flo-CSharp-SDK\FloSDK\FloSDK\obj\Debug\FloSDK.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update\FloSDK\bin\Debug\FloSDK.dll
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update\FloSDK\bin\Debug\FloSDK.pdb
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update\FloSDK\obj\Debug\FloSDK.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update\FloSDK\obj\Debug\FloSDK.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update\FloSDK\obj\Debug\FloSDK.dll
+C:\Users\HP\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update\FloSDK\obj\Debug\FloSDK.pdb
+C:\Users\Abhijeet\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update_Extended\FloSDK\bin\Debug\FloSDK.dll
+C:\Users\Abhijeet\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update_Extended\FloSDK\bin\Debug\FloSDK.pdb
+C:\Users\Abhijeet\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update_Extended\FloSDK\obj\Debug\FloSDK.csprojAssemblyReference.cache
+C:\Users\Abhijeet\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update_Extended\FloSDK\obj\Debug\FloSDK.csproj.CoreCompileInputs.cache
+C:\Users\Abhijeet\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update_Extended\FloSDK\obj\Debug\FloSDK.dll
+C:\Users\Abhijeet\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update_Extended\FloSDK\obj\Debug\FloSDK.pdb
+C:\Users\Abhijeet\Documents\Visual Studio 2017\Projects\FloSDK_Segwit_Update_Extended\FloSDK\obj\Debug\FloSDK.csproj.CopyComplete

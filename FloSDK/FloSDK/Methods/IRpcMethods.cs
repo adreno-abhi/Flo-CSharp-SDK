@@ -6,7 +6,9 @@
 //The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 //THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+using FloSDK.RequestResponse;
 using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace FloSDK.Methods
 {
@@ -15,19 +17,30 @@ namespace FloSDK.Methods
         //== Control ==
         string GetInfo();
         string Help(string command);
+        string GetMemoryInfo(string mode);
+        string Uptime();
+
 
         //==Blockchain==
         string GetBestBlockHash();
-        string GetBlock(string hash);
+        string GetBlock(string blockhash);
         string GetBlockChainInfo();
         string GetBlockCount();
-        string GetBlockHash(int block);
+        string GetBlockHash(int height);
+        string GetBlockHeader(string hash);
         string GetChainTips();
+        string GetChainTxStats();
         string GetDifficulty();
+        string GetMemPoolAncestors(string txid);
+        string GetMemPoolDescendants(string txid);
+        string GetMemPoolEntry(string txid);
         string GetMemPoolInfo();
         string GetRawMemPool();
         string GetTxOut(string txid, int vout);
+        string GetTxOutProof(JArray txid);
         string GetTxOutSetInfo();
+        string Preciousblock(string blockhash);
+        string PruneBlockchain(int height);
         string VerifyChain();
 
         //== Generating ==
@@ -52,12 +65,14 @@ namespace FloSDK.Methods
         string Ping();
 
         //== Rawtransactions ==
-        string CreateRawTransaction(JArray transactions, JObject addresses);
+        //string CreateRawTransaction(JArray transactions, JObject addresses);
+        string CreateRawTransaction(CreateRawTransactionRequest rawTransaction);
         string DecodeRawTransaction(string hexstring);
         string DecodeScript(string hex);
         string GetRawTransaction(string txid);
         string SendRawTransaction(string hexstring);
-        string SignRawTransaction(string hexstring);
+        //string SignRawTransaction(string hexstring);
+        string SignRawTransaction(SignRawTransactionRequest signReq);
 
         //== Util ==
         string CreateMultisig(int nrequired, JArray keys);
@@ -94,6 +109,7 @@ namespace FloSDK.Methods
         string ListSinceBlock();
         string ListTransactions();
         string ListUnspent();
+        string ListUnspent(JArray address);
         string LockUnspent(bool unlock, JArray transactions);
         string Move(string fromaccount, string toaccount, decimal amount);
         string SendFrom(string fromaccount, string toflorincoinaddress, decimal amount);

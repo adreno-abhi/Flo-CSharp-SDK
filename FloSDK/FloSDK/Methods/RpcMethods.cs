@@ -7,8 +7,10 @@
 //THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 using FloSDK.Connector;
+using FloSDK.RequestResponse;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 
 namespace FloSDK.Methods
 {
@@ -42,6 +44,19 @@ namespace FloSDK.Methods
             return resp;
         }
 
+        public string GetMemoryInfo(string mode)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getmemoryinfo", mode);
+            return resp;
+        }
+        public string Uptime()
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("uptime");
+            return resp;
+        }
+
         public string GetBestBlockHash()
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
@@ -49,10 +64,10 @@ namespace FloSDK.Methods
             return resp;
         }
 
-        public string GetBlock(string hash)
+        public string GetBlock(string blockhash)
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
-            string resp = conn.MakeRequest("getblock", hash);
+            string resp = conn.MakeRequest("getblock", blockhash);
             return resp;
         }
 
@@ -70,10 +85,16 @@ namespace FloSDK.Methods
             return resp;
         }
 
-        public string GetBlockHash(int block)
+        public string GetBlockHash(int height)
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
-            string resp = conn.MakeRequest("getblockhash", block);
+            string resp = conn.MakeRequest("getblockhash", height);
+            return resp;
+        }
+        public string GetBlockHeader(string hash)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getblockheader", hash);
             return resp;
         }
 
@@ -83,6 +104,12 @@ namespace FloSDK.Methods
             string resp = conn.MakeRequest("getchaintips");
             return resp;
         }
+        public string GetChainTxStats()
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getchaintxstats");
+            return resp;
+        }
 
         public string GetDifficulty()
         {
@@ -90,11 +117,31 @@ namespace FloSDK.Methods
             string resp = conn.MakeRequest("getdifficulty");
             return resp;
         }
+        public string GetMemPoolAncestors(string txid)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getmempoolancestors", txid);
+            return resp;
+        }
+
+        public string GetMemPoolDescendants(string txid)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getmempooldescendants", txid);
+            return resp;
+        }
 
         public string GetMemPoolInfo()
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
             string resp = conn.MakeRequest("getmempoolinfo");
+            return resp;
+        }
+
+        public string GetMemPoolEntry(string txid)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("getmempoolentry", txid);
             return resp;
         }
 
@@ -111,11 +158,30 @@ namespace FloSDK.Methods
             string resp = conn.MakeRequest("gettxout", txid, vout);
             return resp;
         }
+        public string GetTxOutProof(JArray txid)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("gettxoutproof", txid);
+            return resp;
+        }
 
         public string GetTxOutSetInfo()
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
             string resp = conn.MakeRequest("gettxoutsetinfo");
+            return resp;
+        }
+        public string Preciousblock(string blockhash)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("preciousblock",blockhash);
+            return resp;
+        }
+
+        public string PruneBlockchain(int height)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("pruneblockchain", height);
             return resp;
         }
 
@@ -231,10 +297,17 @@ namespace FloSDK.Methods
             return resp;
         }
 
-        public string CreateRawTransaction(JArray transactions, JObject addresses)
+        //public string CreateRawTransaction(JArray transactions, JObject addresses)
+        //{
+        //    FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+        //    string resp = conn.MakeRequest("createrawtransaction", transactions, addresses);
+        //    return resp;
+        //}
+
+        public string CreateRawTransaction(CreateRawTransactionRequest rawTransaction)
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
-            string resp = conn.MakeRequest("createrawtransaction", transactions, addresses);
+            string resp = conn.MakeRequest("createrawtransaction", rawTransaction.Inputs, rawTransaction.Outputs,rawTransaction.locktime,rawTransaction.replaceable,rawTransaction.floData);
             return resp;
         }
 
@@ -267,10 +340,17 @@ namespace FloSDK.Methods
             return resp;
         }
 
-        public string SignRawTransaction(string hexstring)
+        //public string SignRawTransaction(string hexstring)
+        //{
+        //    FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+        //    string resp = conn.MakeRequest("signrawtransaction", hexstring);
+        //    return resp;
+        //}
+
+        public string SignRawTransaction(SignRawTransactionRequest signReq)
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
-            string resp = conn.MakeRequest("signrawtransaction", hexstring);
+            string resp = conn.MakeRequest("signrawtransaction", signReq.RawTransactionHex,signReq.Inputs,signReq.PrivateKeys,signReq.SigHashType);
             return resp;
         }
 
@@ -495,6 +575,13 @@ namespace FloSDK.Methods
             return resp;
         }
 
+        public string ListUnspent(JArray address)
+        {
+            FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
+            string resp = conn.MakeRequest("listunspent",1,999999,address);
+            return resp;
+        }
+
         public string LockUnspent(bool unlock, JArray transactions)
         {
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
@@ -556,6 +643,10 @@ namespace FloSDK.Methods
             FloRPC conn = new FloRPC(username, password, wallet_url, wallet_port);
             string resp = conn.MakeRequest("signmessage", florincoinaddress, message);
             return resp;
-        }
+        }    
+
+
+
+
     }
 }
